@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
+PROJECT(custom_ops)
+CMAKE_POLICY(SET CMP0054 NEW)
+SET(target_os_arch windows-x86_64)
+SET(release_type debug)
+SET(CMAKE_PREFIX_PATH ${CMAKE_CURRENT_SOURCE_DIR}/deps/${target_os_arch}-${release_type}/libtorch/share/cmake)
+
+FIND_PACKAGE(Torch REQUIRED)
+MESSAGE(STATUS "TORCH_LIBRARIES: ${TORCH_LIBRARIES}")
+ADD_EXECUTABLE(example-app example-app.cpp)
+TARGET_LINK_LIBRARIES(example-app "${TORCH_LIBRARIES}")
+SET_PROPERTY(TARGET example-app PROPERTY CXX_STANDARD 14)
