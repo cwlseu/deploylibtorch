@@ -22,5 +22,5 @@ test_model: mobilenetv2-trace.pt https://pan.baidu.com/s/1neHRHypYq9vbGDlY1WwfJw
 Sol 1： update vs2015 to vs2019 https://github.com/pytorch/pytorch/issues/34124
 Sol 2： only build win64`cmake -G "Visual Studio 14 Win64" ..`
 
-2. GCC ABI
+2. gcc 版本要 >= 5.0， 但是当version >=5.1 会面临GCC ABI的问题
 https://github.com/pytorch/pytorch/issues/14620

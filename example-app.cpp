@@ -27,12 +27,12 @@ int main(int argc, const char* argv[]) {
 	__TIC__(forward)
 	at::Tensor output = module.forward(inputs).toTensor();
 	__TOC__(forward)
-	__TIC__(forward10times)
-	for (int i = 0; i < 10; i++) {
-		module.forward(inputs).toTensor();
+	__TIC__(forward100times)
+	for (int i = 0; i < 100; i++) {
+		module.forward(inputs);
 	}
-	__TOC__(forward10times)
+	__TOC__(forward100times)
 	std::cout << output.slice(/*dim=*/1, /*start=*/0, /*end=*/5) << '\n';
-	std::cout << "ok\n";
+	std::cout << "test finished\n";
 	return 0;
 }
