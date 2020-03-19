@@ -5,5 +5,5 @@ mkdir build
 fi
 cd build 
 cmake .. && make -j4
-./example-app ../models/mobilenetv2-128_S-cpu.pt
+./test_performance ../pytorch
 cd -

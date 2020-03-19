@@ -19,6 +19,7 @@ int main(int argc, const char* argv[]) {
 		std::cerr << "error loading the model\n";
 		return -1;
 	}
+	std::cout << "- model:" << argv[1] << std::endl;
 	// Create a vector of inputs.
 	std::vector<torch::jit::IValue> inputs;
 	inputs.push_back(torch::ones({ 1, 3, 224, 224 }));
@@ -32,7 +33,7 @@ int main(int argc, const char* argv[]) {
 		module.forward(inputs);
 	}
 	__TOC__(forward100times)
-	std::cout << output.slice(/*dim=*/1, /*start=*/0, /*end=*/5) << '\n';
-	std::cout << "test finished\n";
+	// std::cout << output.slice(/*dim=*/1, /*start=*/0, /*end=*/5) << '\n';
+	// std::cout << "test finished\n";
 	return 0;
 }
