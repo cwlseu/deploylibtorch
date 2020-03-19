@@ -20,7 +20,7 @@ FIND_PACKAGE(Torch REQUIRED)
 MESSAGE(STATUS "TORCH_LIBRARIES: ${TORCH_LIBRARIES}")
 INCLUDE_DIRECTORIES(include)
 
-FILE(GLOB samples ${PROJECT_SOURCE_DIR}/*.cpp)
+FILE(GLOB samples ${PROJECT_SOURCE_DIR}/samples/*.cpp)
 
 FOREACH (sample ${samples})
 	STRING(REGEX MATCH "[^/]+$" sample_file ${sample})

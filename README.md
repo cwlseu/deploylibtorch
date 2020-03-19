@@ -9,6 +9,8 @@ Landing in different businesses is an essential capability in current CV and NLP
 
 cmake -G "Visual Studio 14 Win64" -DCMAKE_PREFIX_PATH=../deps/windows-x86_64/libtorch/share/cmake ..
 
+script `pytorch/convert-trace.py` is a sample for convert pytorch model to trace model for libtorch to load
+
 ## models
 
 test_model: mobilenetv2-trace.pt https://pan.baidu.com/s/1neHRHypYq9vbGDlY1WwfJw  code:sym8

@@ -5,5 +5,5 @@ mkdir build
 fi
 cd build 
 cmake .. && make -j4
-./test_performance ../pytorch
+./test_run_tracemodel_indir ../models
 cd -
